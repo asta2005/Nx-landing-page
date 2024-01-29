@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jave.js" defer></script>
+    <title>NXT Museum</title>
+  
+</head>
+
+<body id="js--body">
+    <header class="header">
+        <h1 class="headerTitle"><a href="">NXT Museum</a></h1>
+        <button id="js--menu" class="headerButton">Menu</button>
+    </header>
+    <nav id="js--nav" class="mainNavigation">
+        <ul class="mainNavigationList">
+            <li class="mainNavigationListItem">
+                <a href="">Home</a>
+            </li>
+            <li class="mainNavigationListItem">
+                <a href="index.html">nederlands</a>
+            </li>
+        </ul>
+    </nav>
+    <article class="container">
+        <img class="mainImage" src="img/logo.png" alt="">
+        <section class="text-block">
+            <h2>Who are we!</h2>
+            <p>NXT Museum is the first museum in the Netherlands dedicated to new media art.
+                We focus on art that uses modern tools to embody contemporary times.
+                We believe that the tools used in artistic expression reflect the era we live in.
+                That makes them the perfect means to understand contemporary complexity, allowing us to recognize our reality.
+            </p>
+        </section>
+    </article>
+    <section class="images">
+        <img src="img/mus10.jpg" alt="" class="image image__1">
+        <img src="img/mus9.jpg" alt="" class="image image__2">
+        <img src="img/mus7.jpg" alt="" class="image image__3">
+        <script>
+            var images = ["img/mus10.jpg", "img/mus4.jpg", "img/mus8.jpg", "img/mus6.jpg"];
+            var currentImageIndex = 0;
+            var imageElement = document.querySelector("img"); 
+            function changeImage() {
+                imageElement.src = images[currentImageIndex];
+                currentImageIndex++;
+
+                if (currentImageIndex === images.length) {
+                    currentImageIndex = 0;
+                }
+            }
+
+           
+            setInterval(changeImage, 5000);
+        </script>
+        
+    </section>
+    <section class="textBlocksContainer">
+        <article class="textBlocks">
+            <h2>History</h2>
+            <p>
+                NXT Museum, founded by the young entrepreneur Merel van Helsdingen, exhibits large-scale art installations,
+                developed through interdisciplinary collaborations between established and emerging artists, designers, technicians, musicians, and scientists.
+            </p>
+        </article>
+        <article class="textBlocks">
+            <h2>Our Goal</h2>
+            <p>It is our mission to enable new and next iterations of creative expression.
+                Everything we do, desire, and fear directly relates to the future.
+                It is one of the most fascinating concepts for the human mind. An exciting source of inspiration that raises endless questions.
+                Nowadays, these questions are more important and complex than ever.
+                What's next? We don't know, but we are endlessly curious to explore together.
+            </p>
+        </article>
+    </section>
+    <article class="textBlocks">
+        <h2>Reviews</h2>
+        <p>We really enjoyed our visit. It was a very rainy day and it took us a while to walk here,
+            but it was definitely worth the journey. We left our coats in the free wardrobe and spent a few hours immersing ourselves in the activities of the NXT museum using the free audio guide.
+            We liked the museum's approach to sharing facts but also inviting the audience to think and challenge viewpoints and consensus. We were hooked on the introductory message explaining the concept.
+            Lots of details and activities throughout the ages - excellent. We didn't really like the last modern part - but that's our taste and not a criticism - form your own opinion.
+            All the staff we encountered were very friendly and happy to help - great location and would recommend.</p>
+    </article>
+    <article class="textBlocks">
+        <h2>Review</h2>
+        <p>It was a small museum and had a nice history, but you wanted more.
+            It seemed like there was much more history to tell about Amsterdam.
+            I love history, and unfortunately, this museum couldn't capture my interest at all.</p>
+    </article>
+    <footer class="footer">
+        <address class="footer__address">
+            <h3>Address:</h3>
+            Asterweg 22
+            1031HP Amsterdam
+            Netherlands
+        </address>
+        <section class="openingHours">
+            <p class="openingstijden__dagen">Adres:
+                Asterweg 22
+            1031HP Amsterdam
+            Nederland
+            </p>
+            <h4 class="openingstijden__h4">Openingstijden</h4>
+            <p class="openingstijden__dagen">monday: 10:30-20:30 uur</p>
+            <p class="openingstijden__dagen">tuesday: 10:30-20:30 uur </p>
+            <p class="openingstijden__dagen">whensday: 11:00-21:30 uur</p>
+            <p class="openingstijden__dagen">thursday: 10:30-22:30 uur</p>
+            <p class="openingstijden__dagen">fryday: 10:30-22:30 uur</p>
+            <p class="openingstijden__dagen">zaterday: 10:30-22:30 uur</p>
+            <p class="openingstijden__dagen">sunday: 10:30-20:30 uur</p>
+        </section>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('js--nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
